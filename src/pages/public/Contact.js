@@ -31,8 +31,8 @@ const Contact = () => {
             <h3>Get in Touch with WealthsLink</h3>
             <p>Have questions? We'd love to hear from you. Our support team is available 24/7.</p>
             <div className="contact-details">
-              <p><strong>📧 Email:</strong> support@wealthslink.com</p>
-              <p><strong>📱 Phone:</strong> +91 1800-123-4567 (Toll Free)</p>
+              <p><strong>📧 Email:</strong> abhilekhk6@gmail.com</p>
+              <p><strong>📱 Phone:</strong> +91 9315857918</p>
               <p><strong>📍 Address:</strong> WealthsLink Corporate Office<br/>
               123 Business Tower, Financial District<br/>
               Mumbai, Maharashtra 400001, India</p>

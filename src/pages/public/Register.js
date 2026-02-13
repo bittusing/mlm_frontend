@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { register } from '../../redux/slices/authSlice';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Navbar from '../../components/Navbar';
 import './Auth.css';
 
@@ -15,6 +16,7 @@ const Register = () => {
     phone: '',
     sponsorCode: ''
   });
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -47,7 +49,21 @@ const Register = () => {
             </div>
             <div className="form-group">
               <label>Password</label>
-              <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+              <div className="password-input-wrapper">
+                <input 
+                  type={showPassword ? "text" : "password"} 
+                  name="password" 
+                  value={formData.password} 
+                  onChange={handleChange} 
+                  required 
+                />
+                <span 
+                  className="password-toggle-icon" 
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
+              </div>
             </div>
             <div className="form-group">
               <label>Phone</label>
