@@ -1,0 +1,63 @@
+.withdrawal-management h1 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.filter-tabs {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.filter-tabs button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.filter-tabs button.active {
+  background-color: #3498db;
+  color: white;
+}
+
+.withdrawals-table {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.withdrawals-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.withdrawals-table th,
+.withdrawals-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.withdrawals-table th {
+  background-color: #34495e;
+  color: white;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.approved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.rejected {
+  background-color: #f8d7da;
+  color: #721c24;
+}

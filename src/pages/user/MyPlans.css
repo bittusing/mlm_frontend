@@ -1,0 +1,46 @@
+.my-plans-container h1 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.plans-table {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.plans-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.plans-table th,
+.plans-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.plans-table th {
+  background-color: #34495e;
+  color: white;
+  font-weight: 600;
+}
+
+.status {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.status.active {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.status.expired {
+  background-color: #f8d7da;
+  color: #721c24;
+}

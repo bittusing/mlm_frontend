@@ -1,0 +1,55 @@
+.plan-management h1 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.create-plan-form {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 600px;
+}
+
+.create-plan-form h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.existing-plans {
+  margin-top: 40px;
+}
+
+.existing-plans h2 {
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.plans-table {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.plans-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.plans-table th,
+.plans-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.plans-table th {
+  background-color: #34495e;
+  color: white;
+}
+
+.status.inactive {
+  background-color: #f8d7da;
+  color: #721c24;
+}

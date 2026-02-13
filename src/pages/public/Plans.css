@@ -1,0 +1,112 @@
+.plans-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.plans-page-container h1 {
+  text-align: center;
+  margin-bottom: 15px;
+  color: #2c3e50;
+  font-size: 42px;
+}
+
+.plans-subtitle {
+  text-align: center;
+  color: #7f8c8d;
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.plan-card {
+  background: white;
+  padding: 0;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.plan-card h3 {
+  font-size: 28px;
+  margin: 30px 0 20px;
+  color: #2c3e50;
+  padding: 0 30px;
+}
+
+.plan-price {
+  font-size: 48px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 20px 0;
+}
+
+.plan-roi-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.plan-roi-badge span {
+  display: block;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.plan-roi-badge strong {
+  display: block;
+  font-size: 32px;
+  margin-top: 5px;
+}
+
+.plan-features {
+  list-style: none;
+  margin: 30px 0;
+  text-align: left;
+  padding: 0 30px;
+}
+
+.plan-features li {
+  padding: 12px 0;
+  border-bottom: 1px solid #ecf0f1;
+  color: #2c3e50;
+  font-size: 15px;
+}
+
+.plan-card .btn {
+  width: calc(100% - 60px);
+  margin: 0 30px 30px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border: none;
+}
+
+.plan-popular {
+  position: absolute;
+  top: 20px;
+  right: -30px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 5px 40px;
+  transform: rotate(45deg);
+  font-size: 12px;
+  font-weight: bold;
+}

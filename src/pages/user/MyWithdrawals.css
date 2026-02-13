@@ -1,0 +1,97 @@
+.my-withdrawals-container {
+  padding: 20px;
+}
+
+.my-withdrawals-container h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.loading-message {
+  text-align: center;
+  padding: 60px;
+  font-size: 18px;
+  color: #7f8c8d;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.no-withdrawals {
+  text-align: center;
+  padding: 60px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.no-withdrawals p {
+  color: #7f8c8d;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.withdrawals-table {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow-x: auto;
+}
+
+.withdrawals-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.withdrawals-table th,
+.withdrawals-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.withdrawals-table th {
+  background-color: #34495e;
+  color: white;
+  font-weight: 600;
+}
+
+.withdrawals-table tr:hover {
+  background-color: #f8f9fa;
+}
+
+.amount {
+  font-weight: bold;
+  color: #27ae60;
+  font-size: 18px;
+}
+
+.bank-info {
+  font-size: 14px;
+}
+
+.small-text {
+  font-size: 12px;
+  color: #7f8c8d;
+  margin-top: 3px;
+}
+
+.status-badge {
+  padding: 6px 15px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .withdrawals-table {
+    overflow-x: scroll;
+  }
+  
+  .withdrawals-table table {
+    min-width: 800px;
+  }
+}
