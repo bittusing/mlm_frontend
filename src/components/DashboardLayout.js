@@ -17,7 +17,14 @@ const DashboardLayout = ({ children }) => {
       <Sidebar role={user?.role} />
       <div className="dashboard-main">
         <div className="dashboard-header">
-          <h2>Welcome, {user?.name}</h2>
+          <div className="header-left">
+            <h2>Welcome, {user?.name}</h2>
+            {user?.referralCode && (
+              <p className="referral-code-header">
+                Referral Code: <strong>{user.referralCode}</strong>
+              </p>
+            )}
+          </div>
           <button onClick={handleLogout} className="btn-logout">Logout</button>
         </div>
         <div className="dashboard-content">

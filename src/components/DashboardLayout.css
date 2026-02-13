@@ -18,6 +18,23 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.dashboard-header .header-left h2 {
+  margin: 0 0 5px 0;
+  color: #2c3e50;
+}
+
+.dashboard-header .referral-code-header {
+  margin: 0;
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.dashboard-header .referral-code-header strong {
+  color: #3498db;
+  font-size: 16px;
+  font-weight: 700;
+}
+
 .dashboard-content {
   padding: 20px;
 }
