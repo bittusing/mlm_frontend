@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { login } from '../../redux/slices/authSlice';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import Navbar from '../../components/Navbar';
 import './Auth.css';
 
@@ -9,6 +10,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({ email: '', password: '' });
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -28,7 +30,9 @@ const Login = () => {
       <Navbar />
       <div className="auth-container">
         <div className="auth-card">
-          <h2>Login</h2>
+          <div className="auth-logo">💎</div>
+          <h2>Welcome to WealthsLink</h2>
+          <p className="auth-subtitle">Login to access your dashboard</p>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Email</label>
@@ -42,13 +46,21 @@ const Login = () => {
             </div>
             <div className="form-group">
               <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                value={formData.password}
-                onChange={handleChange}
-                required
-              />
+              <div className="password-input-wrapper">
+                <input
+                  type={showPassword ? "text" : "password"}
+                  name="password"
+                  value={formData.password}
+                  onChange={handleChange}
+                  required
+                />
+                <span 
+                  className="password-toggle-icon" 
+                  onClick={() => setShowPassword(!showPassword)}
+                >
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
+              </div>
             </div>
             <button type="submit" className="btn btn-primary">Login</button>
           </form>

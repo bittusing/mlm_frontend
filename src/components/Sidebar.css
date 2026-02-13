@@ -9,10 +9,47 @@
 }
 
 .sidebar-header {
-  padding: 20px;
-  background-color: #34495e;
+  padding: 25px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
   text-align: center;
+  border-bottom: 3px solid rgba(255,255,255,0.2);
+}
+
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+}
+
+.sidebar-logo-icon {
+  font-size: 36px;
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.sidebar-logo-text h3 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.sidebar-logo-text p {
+  margin: 5px 0 0 0;
+  font-size: 12px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .sidebar-menu {

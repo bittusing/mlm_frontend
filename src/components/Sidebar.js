@@ -33,7 +33,13 @@ const Sidebar = ({ role }) => {
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <h3>{role === 'ADMIN' ? 'Admin Panel' : 'User Panel'}</h3>
+        <div className="sidebar-logo">
+          <span className="sidebar-logo-icon">💎</span>
+          <div className="sidebar-logo-text">
+            <h3>WealthsLink</h3>
+            <p>{role === 'ADMIN' ? 'Admin Panel' : 'User Panel'}</p>
+          </div>
+        </div>
       </div>
       <ul className="sidebar-menu">
         {links.map((link) => (

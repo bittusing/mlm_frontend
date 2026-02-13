@@ -1,6 +1,7 @@
 {
-  "name": "mlm-frontend",
+  "name": "wealthslink-frontend",
   "version": "1.0.0",
+  "description": "WealthsLink - Financial Freedom Platform",
   "private": true,
   "dependencies": {
     "react": "^18.2.0",

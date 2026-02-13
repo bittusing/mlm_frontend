@@ -24,16 +24,19 @@ const Contact = () => {
     <div>
       <Navbar />
       <div className="contact-container">
-        <h1>Contact Us</h1>
+        <h1>Contact WealthsLink</h1>
         
         <div className="contact-content">
           <div className="contact-info">
-            <h3>Get in Touch</h3>
-            <p>Have questions? We'd love to hear from you.</p>
+            <h3>Get in Touch with WealthsLink</h3>
+            <p>Have questions? We'd love to hear from you. Our support team is available 24/7.</p>
             <div className="contact-details">
-              <p><strong>Email:</strong> support@mlmapp.com</p>
-              <p><strong>Phone:</strong> +91 1234567890</p>
-              <p><strong>Address:</strong> 123 Business Street, City, Country</p>
+              <p><strong>📧 Email:</strong> support@wealthslink.com</p>
+              <p><strong>📱 Phone:</strong> +91 1800-123-4567 (Toll Free)</p>
+              <p><strong>📍 Address:</strong> WealthsLink Corporate Office<br/>
+              123 Business Tower, Financial District<br/>
+              Mumbai, Maharashtra 400001, India</p>
+              <p><strong>⏰ Support Hours:</strong> 24/7 Available</p>
             </div>
           </div>
 

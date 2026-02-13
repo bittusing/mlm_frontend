@@ -33,7 +33,9 @@ const Register = () => {
       <Navbar />
       <div className="auth-container">
         <div className="auth-card">
-          <h2>Register</h2>
+          <div className="auth-logo">💎</div>
+          <h2>Join WealthsLink</h2>
+          <p className="auth-subtitle">Create your account and start earning</p>
           <form onSubmit={handleSubmit}>
             <div className="form-group">
               <label>Full Name</label>

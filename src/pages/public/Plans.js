@@ -15,8 +15,8 @@ const Plans = () => {
     <div>
       <Navbar />
       <div className="plans-page-container">
-        <h1>Investment Plans</h1>
-        <p className="plans-subtitle">Choose the plan that suits your investment goals</p>
+        <h1>WealthsLink Investment Plans</h1>
+        <p className="plans-subtitle">Choose the plan that suits your investment goals and start building your wealth today</p>
         
         <div className="plans-grid">
           {plans.map((plan, index) => (

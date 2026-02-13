@@ -10,8 +10,9 @@ const Home = () => {
       <div className="home-container">
         <section className="hero">
           <div className="hero-content">
-            <h1>Build Your Financial Freedom</h1>
-            <p className="hero-subtitle">Join thousands of successful entrepreneurs earning passive income through our proven MLM system</p>
+            <div className="hero-logo">💎</div>
+            <h1>Build Your Financial Freedom with WealthsLink</h1>
+            <p className="hero-subtitle">Join thousands of successful entrepreneurs earning passive income through our proven investment & network marketing system</p>
             <div className="hero-stats">
               <div className="hero-stat">
                 <h3>10,000+</h3>
@@ -118,9 +119,9 @@ const Home = () => {
         </section>
 
         <section className="cta-section">
-          <h2>Ready to Start Your Journey?</h2>
-          <p>Join thousands of successful members earning passive income</p>
-          <Link to="/register" className="btn btn-primary btn-large">Join Now - It's Free!</Link>
+          <h2>Ready to Start Your Journey with WealthsLink?</h2>
+          <p>Join thousands of successful members earning passive income. Start building your financial freedom today!</p>
+          <Link to="/register" className="btn btn-primary btn-large">Join WealthsLink Now - It's Free!</Link>
         </section>
       </div>
     </div>

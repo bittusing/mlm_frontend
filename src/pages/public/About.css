@@ -17,6 +17,22 @@
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.about-logo {
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 30px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
 .about-content h2 {
   color: #2c3e50;
   margin-top: 30px;
