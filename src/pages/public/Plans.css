@@ -110,3 +110,89 @@
   font-size: 12px;
   font-weight: bold;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .plans-page-container {
+    padding: 40px 15px;
+  }
+
+  .plans-page-container h1 {
+    font-size: 32px;
+  }
+
+  .plans-subtitle {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .plan-card h3 {
+    font-size: 24px;
+    padding: 0 20px;
+  }
+
+  .plan-price {
+    font-size: 40px;
+  }
+
+  .plan-roi-badge strong {
+    font-size: 28px;
+  }
+
+  .plan-features {
+    padding: 0 20px;
+  }
+
+  .plan-features li {
+    font-size: 14px;
+    padding: 10px 0;
+  }
+
+  .plan-card .btn {
+    width: calc(100% - 40px);
+    margin: 0 20px 20px;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .plan-popular {
+    font-size: 11px;
+    padding: 4px 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plans-page-container {
+    padding: 30px 10px;
+  }
+
+  .plans-page-container h1 {
+    font-size: 26px;
+  }
+
+  .plans-subtitle {
+    font-size: 14px;
+  }
+
+  .plan-card h3 {
+    font-size: 22px;
+    margin: 20px 0 15px;
+  }
+
+  .plan-price {
+    font-size: 36px;
+  }
+
+  .plan-roi-badge {
+    padding: 12px;
+  }
+
+  .plan-roi-badge strong {
+    font-size: 24px;
+  }
+}

@@ -26,3 +26,72 @@
   background-color: #34495e;
   color: white;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .my-team-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .team-stats {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .team-stat-card {
+    padding: 20px;
+  }
+
+  .team-stat-card h3 {
+    font-size: 13px;
+  }
+
+  .team-stat-value {
+    font-size: 28px;
+  }
+
+  .team-list {
+    padding: 20px;
+  }
+
+  .team-list h2 {
+    font-size: 22px;
+  }
+
+  .team-table {
+    overflow-x: scroll;
+  }
+
+  .team-table table {
+    min-width: 600px;
+  }
+
+  .team-table th,
+  .team-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .my-team-container h1 {
+    font-size: 24px;
+  }
+
+  .team-stat-card {
+    padding: 15px;
+  }
+
+  .team-stat-value {
+    font-size: 24px;
+  }
+
+  .team-list {
+    padding: 15px;
+  }
+
+  .team-list h2 {
+    font-size: 20px;
+  }
+}

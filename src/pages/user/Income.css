@@ -77,3 +77,73 @@
 .debit {
   color: #e74c3c;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .income-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .income-summary {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+
+  .income-card {
+    padding: 20px;
+  }
+
+  .income-card h3 {
+    font-size: 13px;
+  }
+
+  .income-amount {
+    font-size: 28px;
+  }
+
+  .income-history {
+    padding: 20px;
+  }
+
+  .income-history h2 {
+    font-size: 22px;
+  }
+
+  .income-table {
+    overflow-x: scroll;
+  }
+
+  .income-table table {
+    min-width: 600px;
+  }
+
+  .income-table th,
+  .income-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .income-container h1 {
+    font-size: 24px;
+  }
+
+  .income-card {
+    padding: 15px;
+  }
+
+  .income-amount {
+    font-size: 24px;
+  }
+
+  .income-history {
+    padding: 15px;
+  }
+
+  .income-history h2 {
+    font-size: 20px;
+  }
+}

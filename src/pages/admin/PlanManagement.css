@@ -53,3 +53,69 @@
   background-color: #f8d7da;
   color: #721c24;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .plan-management h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .create-plan-form {
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .create-plan-form h2 {
+    font-size: 22px;
+  }
+
+  .existing-plans {
+    margin-top: 30px;
+  }
+
+  .existing-plans h2 {
+    font-size: 22px;
+  }
+
+  .plans-table {
+    overflow-x: scroll;
+  }
+
+  .plans-table table {
+    min-width: 800px;
+  }
+
+  .plans-table th,
+  .plans-table td {
+    padding: 12px 10px;
+    font-size: 14px;
+  }
+
+  .btn-success,
+  .btn-danger {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .plan-management h1 {
+    font-size: 24px;
+  }
+
+  .create-plan-form {
+    padding: 15px;
+  }
+
+  .create-plan-form h2,
+  .existing-plans h2 {
+    font-size: 20px;
+  }
+
+  .plans-table th,
+  .plans-table td {
+    padding: 10px 8px;
+    font-size: 13px;
+  }
+}

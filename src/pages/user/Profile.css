@@ -51,3 +51,70 @@
 .password-toggle-icon:hover {
   color: #3498db;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .profile-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .profile-info {
+    padding: 15px;
+  }
+
+  .profile-info p {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .profile-form {
+    padding: 20px;
+  }
+
+  .profile-form h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+  }
+
+  .form-group input {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container h1 {
+    font-size: 24px;
+  }
+
+  .profile-info {
+    padding: 12px;
+  }
+
+  .profile-info p {
+    font-size: 13px;
+  }
+
+  .profile-form {
+    padding: 15px;
+  }
+
+  .profile-form h3 {
+    font-size: 18px;
+  }
+
+  .form-group input {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

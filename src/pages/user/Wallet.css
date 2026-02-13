@@ -61,3 +61,71 @@
   font-weight: 600;
   color: #2c3e50;
 }
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .wallet-container h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .wallet-balance {
+    padding: 30px 20px;
+  }
+
+  .wallet-balance h2 {
+    font-size: 16px;
+  }
+
+  .balance-amount {
+    font-size: 40px;
+  }
+
+  .withdrawal-form {
+    padding: 20px;
+  }
+
+  .withdrawal-form h3 {
+    font-size: 20px;
+  }
+
+  .bank-details-note {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .no-balance-message {
+    padding: 20px;
+  }
+
+  .no-balance-message p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .wallet-container h1 {
+    font-size: 24px;
+  }
+
+  .wallet-balance {
+    padding: 25px 15px;
+  }
+
+  .balance-amount {
+    font-size: 36px;
+  }
+
+  .withdrawal-form {
+    padding: 15px;
+  }
+
+  .withdrawal-form h3 {
+    font-size: 18px;
+  }
+
+  .bank-details-note {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
