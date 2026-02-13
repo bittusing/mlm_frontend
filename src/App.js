@@ -32,6 +32,7 @@ import PlanManagement from './pages/admin/PlanManagement';
 import WithdrawalManagement from './pages/admin/WithdrawalManagement';
 import CommissionSettings from './pages/admin/CommissionSettings';
 import Reports from './pages/admin/Reports';
+import UserTreeView from './pages/admin/UserTreeView';
 
 // Components
 import PrivateRoute from './components/PrivateRoute';
@@ -80,6 +81,7 @@ function App() {
         {/* Admin Routes */}
         <Route path="/admin/dashboard" element={<AdminRoute><AdminDashboard /></AdminRoute>} />
         <Route path="/admin/users" element={<AdminRoute><UserManagement /></AdminRoute>} />
+        <Route path="/admin/user-tree/:userId" element={<AdminRoute><UserTreeView /></AdminRoute>} />
         <Route path="/admin/plans" element={<AdminRoute><PlanManagement /></AdminRoute>} />
         <Route path="/admin/withdrawals" element={<AdminRoute><WithdrawalManagement /></AdminRoute>} />
         <Route path="/admin/commission-settings" element={<AdminRoute><CommissionSettings /></AdminRoute>} />

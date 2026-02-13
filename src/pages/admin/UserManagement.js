@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { getAllUsers, blockUser, unblockUser } from '../../redux/slices/adminSlice';
 import DashboardLayout from '../../components/DashboardLayout';
 import './UserManagement.css';
 
 const UserManagement = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { users } = useSelector((state) => state.admin);
   const [search, setSearch] = useState('');
 
@@ -25,6 +27,10 @@ const UserManagement = () => {
     dispatch(unblockUser(userId)).then(() => {
       dispatch(getAllUsers({ search }));
     });
+  };
+
+  const handleViewTree = (userId, userName) => {
+    navigate(`/admin/user-tree/${userId}`, { state: { userName } });
   };
 
   return (
@@ -61,22 +67,31 @@ const UserManagement = () => {
                   <td>{user.email}</td>
                   <td>{user.phone}</td>
                   <td>{user.referralCode}</td>
-                  <td>₹{user.totalInvestment}</td>
+                  <td>₹{user.totalInvestment || 0}</td>
                   <td>
                     <span className={`status ${user.isBlocked ? 'blocked' : 'active'}`}>
                       {user.isBlocked ? 'Blocked' : 'Active'}
                     </span>
                   </td>
                   <td>
-                    {user.isBlocked ? (
-                      <button onClick={() => handleUnblock(user._id)} className="btn btn-success">
-                        Unblock
+                    <div className="action-buttons">
+                      <button 
+                        onClick={() => handleViewTree(user._id, user.name)} 
+                        className="btn btn-primary btn-sm"
+                        title="View Team Tree"
+                      >
+                        View Tree
                       </button>
-                    ) : (
-                      <button onClick={() => handleBlock(user._id)} className="btn btn-danger">
-                        Block
-                      </button>
-                    )}
+                      {user.isBlocked ? (
+                        <button onClick={() => handleUnblock(user._id)} className="btn btn-success btn-sm">
+                          Unblock
+                        </button>
+                      ) : (
+                        <button onClick={() => handleBlock(user._id)} className="btn btn-danger btn-sm">
+                          Block
+                        </button>
+                      )}
+                    </div>
                   </td>
                 </tr>
               ))}
