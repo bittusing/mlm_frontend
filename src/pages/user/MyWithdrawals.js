@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import DashboardLayout from '../../components/DashboardLayout';
 import axios from 'axios';
 import API_URL from '../../config/api';

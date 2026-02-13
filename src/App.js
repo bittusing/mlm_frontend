@@ -23,6 +23,7 @@ import Wallet from './pages/user/Wallet';
 import MyTeam from './pages/user/MyTeam';
 import TeamTree from './pages/user/TeamTree';
 import MyWithdrawals from './pages/user/MyWithdrawals';
+import PaymentHistory from './pages/user/PaymentHistory';
 
 // Admin Pages
 import AdminDashboard from './pages/admin/Dashboard';
@@ -38,7 +39,7 @@ import AdminRoute from './components/AdminRoute';
 
 function App() {
   const dispatch = useDispatch();
-  const { isAuthenticated, loading } = useSelector((state) => state.auth);
+  const { isAuthenticated } = useSelector((state) => state.auth);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
