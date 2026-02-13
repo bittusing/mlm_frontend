@@ -25,6 +25,7 @@ const UserTreeView = () => {
 
   useEffect(() => {
     fetchUserTree();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userId]);
 
   const fetchUserTree = async () => {
