@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { updateProfile, changePassword } from '../../redux/slices/authSlice';
 import DashboardLayout from '../../components/DashboardLayout';
 import './Profile.css';
 
 const Profile = () => {
+  const dispatch = useDispatch();
   const { user } = useSelector((state) => state.auth);
   const [formData, setFormData] = useState({
-    name: user?.name || '',
-    phone: user?.phone || '',
-    accountNumber: user?.bankDetails?.accountNumber || '',
-    ifscCode: user?.bankDetails?.ifscCode || '',
-    bankName: user?.bankDetails?.bankName || '',
-    accountHolderName: user?.bankDetails?.accountHolderName || ''
+    name: '',
+    phone: '',
+    accountNumber: '',
+    ifscCode: '',
+    bankName: '',
+    accountHolderName: ''
   });
   const [passwordData, setPasswordData] = useState({
     currentPassword: '',
@@ -22,6 +24,19 @@ const Profile = () => {
   const [showCurrentPassword, setShowCurrentPassword] = useState(false);
   const [showNewPassword, setShowNewPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      setFormData({
+        name: user.name || '',
+        phone: user.phone || '',
+        accountNumber: user.bankDetails?.accountNumber || '',
+        ifscCode: user.bankDetails?.ifscCode || '',
+        bankName: user.bankDetails?.bankName || '',
+        accountHolderName: user.bankDetails?.accountHolderName || ''
+      });
+    }
+  }, [user]);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -33,8 +48,17 @@ const Profile = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Dispatch update profile action
-    alert('Profile update functionality to be implemented');
+    const profileData = {
+      name: formData.name,
+      phone: formData.phone,
+      bankDetails: {
+        accountNumber: formData.accountNumber,
+        ifscCode: formData.ifscCode,
+        bankName: formData.bankName,
+        accountHolderName: formData.accountHolderName
+      }
+    };
+    dispatch(updateProfile(profileData));
   };
 
   const handlePasswordSubmit = (e) => {
@@ -43,8 +67,14 @@ const Profile = () => {
       alert('New passwords do not match!');
       return;
     }
-    // Dispatch change password action
-    alert('Password change functionality to be implemented');
+    if (passwordData.newPassword.length < 6) {
+      alert('Password must be at least 6 characters long!');
+      return;
+    }
+    dispatch(changePassword({
+      currentPassword: passwordData.currentPassword,
+      newPassword: passwordData.newPassword
+    }));
     setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' });
   };
 

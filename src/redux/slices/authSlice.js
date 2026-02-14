@@ -40,13 +40,41 @@ export const loadUser = createAsyncThunk('auth/loadUser', async (_, { rejectWith
   }
 });
 
+export const updateProfile = createAsyncThunk('auth/updateProfile', async (profileData, { rejectWithValue }) => {
+  try {
+    const token = localStorage.getItem('token');
+    const { data } = await axios.put(`${API_URL}/users/profile`, profileData, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    toast.success('Profile updated successfully!');
+    return data;
+  } catch (error) {
+    toast.error(error.response?.data?.message || 'Profile update failed');
+    return rejectWithValue(error.response?.data);
+  }
+});
+
+export const changePassword = createAsyncThunk('auth/changePassword', async (passwordData, { rejectWithValue }) => {
+  try {
+    const token = localStorage.getItem('token');
+    const { data } = await axios.put(`${API_URL}/users/change-password`, passwordData, {
+      headers: { Authorization: `Bearer ${token}` }
+    });
+    toast.success('Password changed successfully!');
+    return data;
+  } catch (error) {
+    toast.error(error.response?.data?.message || 'Password change failed');
+    return rejectWithValue(error.response?.data);
+  }
+});
+
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
     user: null,
     token: localStorage.getItem('token'),
-    isAuthenticated: false,
-    loading: false
+    isAuthenticated: !!localStorage.getItem('token'), // Set true if token exists
+    loading: true // Start with loading true
   },
   reducers: {
     logout: (state) => {
@@ -84,6 +112,12 @@ const authSlice = createSlice({
         state.token = null;
         state.isAuthenticated = false;
         state.loading = false;
+      })
+      .addCase(updateProfile.fulfilled, (state, action) => {
+        state.user = action.payload.user;
+      })
+      .addCase(changePassword.fulfilled, (state) => {
+        // Password changed, no state update needed
       });
   }
 });
